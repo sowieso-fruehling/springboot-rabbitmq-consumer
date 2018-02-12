@@ -1,0 +1,18 @@
+spring:
+#    if we don't configure rabbitMQ, defaults will be used (localhost:5672)
+  rabbitmq:
+#    host: localhost
+    username: guest
+    password: guest
+#    virtual-host: myvhost # by default its /
+#    port: 5667
+
+#previous propertis are built-in, following ones are user defined
+    exchange: profiles
+    queue: my-profiles-loopback
+    routing-key: profile.created
+
+logging:
+  level:
+    org: INFO
+
